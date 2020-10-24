@@ -17,4 +17,4 @@ async def code(ctx, code):
     await ctx.channel.purge(limit=1)
 
 
-client.run(os.environ['DISCORD_TOKEN'])
+client.run("NzYyMDE5MDkzMzI2NTk0MDc4.X3jDlQ.Ssjo9lzTfR9p2MuWpsAwHfzDq70")
