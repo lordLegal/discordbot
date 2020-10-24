@@ -1,1 +1,1 @@
-worker: python Amongus.py
+worker: python amongus.py
