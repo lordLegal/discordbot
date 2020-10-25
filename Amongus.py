@@ -16,6 +16,7 @@ async def on_ready():
 @client.command()
 async def code(ctx, code):
     await ctx.channel.purge(limit=1)
+    await 
 
 
 client.run(os.environ['DISCORD_TOKEN'])
