@@ -14,10 +14,9 @@ async def on_ready():
     await client.change_presence(status=discord.Status.online, activity=discord.Game('Skalave von  .help '))
     print("Bot is ready")
 
-@client.command()
-async def code(ctx, *, member, c):
-    await ctx.channel.purge(limit=1)
-    await ctx.send(member, c)
+@client.command(pass_context = True)
+async def dm(ctx, member : discord.Member, *, content: str):
+    await ctx.send(member, content)
 
 
 
