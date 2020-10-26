@@ -4,6 +4,7 @@ import random
 from discord.ext import commands, tasks
 import time
 import os
+import sqlite3
 
 client = commands.Bot(command_prefix = '.')
 client.remove_command('help')
@@ -14,9 +15,10 @@ async def on_ready():
     print("Bot is ready")
 
 @client.command()
-async def code(ctx, code):
+async def code(ctx, code, *, member):
     await ctx.channel.purge(limit=1)
-    await 
+    await ctx.author.send(code)
+
 
 
 client.run(os.environ['DISCORD_TOKEN'])
