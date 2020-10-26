@@ -15,9 +15,9 @@ async def on_ready():
     print("Bot is ready")
 
 @client.command()
-async def code(ctx, code, *, member):
+async def code(ctx, *, member):
     await ctx.channel.purge(limit=1)
-    await ctx.author.send(code)
+    await ctx.author.send(member)
 
 
 
