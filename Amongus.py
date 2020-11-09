@@ -6,6 +6,8 @@ import time
 import os
 import sqlite3
 
+
+
 client = commands.Bot(command_prefix = '.')
 client.remove_command('help')
 
@@ -15,9 +17,16 @@ async def on_ready():
     print("Bot is ready")
 
 @client.command()
-async def code(ctx, code, *, member):
-    await ctx.channel.purge(limit=1)
-    await ctx.send.member(code)
+async def code(ctx, members):
+    await ctx.send.author("Hallo")
+
+@client.command()
+async def Hey(ctx):
+    embed=discord.Embed(title="Your Bot", color=0xba1c1c)
+    embed.add_field(name="Hey", value="This is my Bot It But I can also do some for you", inline=False)
+    embed.set_footer(text="by Retox")
+    await ctx.send(embed=embed)
+    
 
 
 
