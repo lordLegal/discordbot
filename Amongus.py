@@ -27,7 +27,10 @@ async def Hey(ctx):
     embed.set_footer(text="by Retox")
     await ctx.send(embed=embed)
     
-
+@client.command()
+async def clear(ctx, amount=5):
+    await ctx.channel.purge(limit=1)
+    await ctx.channel.purge(limit=amount)
 
 
 client.run(os.environ['DISCORD_TOKEN'])
